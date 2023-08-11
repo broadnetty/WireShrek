@@ -5,10 +5,9 @@ import sys
 #Job.Backup_Job_For_restore.Backup.log Job.Veeam_Backup__SUK__-_Daily.Backup.log
 
 
+lang_file = 'WireShrek.tmLanguage'
 
-#
-buff='kjhj'
-class TestexecCommand(sublime_plugin.TextCommand):
+class TextexecCommand(sublime_plugin.TextCommand):
 	def run(self, edit, lines):
 		currvw = self.view
 		texta=''
@@ -53,8 +52,8 @@ class JobstatsCommand(sublime_plugin.WindowCommand):
 		
 		self.window.new_file()
 		viewv = self.window.active_view()
-		viewv.run_command('testexec', { "lines" : buffa })
-		viewv.set_syntax_file('Packages/VeeamLogViewer/veeam-logs.tmLanguage')
+		viewv.run_command('textexec', { "lines" : buffa })
+		viewv.assign_syntax(lang_file)
 
 class JobstatCommand(sublime_plugin.WindowCommand):
 	def run(self):
@@ -80,8 +79,8 @@ class JobstatCommand(sublime_plugin.WindowCommand):
 		
 		self.window.new_file()
 		viewv = self.window.active_view()
-		viewv.run_command('testexec', { "lines" : buffa } )
-		viewv.set_syntax_file('Packages/VeeamLogViewer/veeam-logs.tmLanguage')
+		viewv.run_command('textexec', { "lines" : buffa } )
+		viewv.set_syntax_file(lang_file)
 
 class NewwinCommand(sublime_plugin.WindowCommand):
 	def run(self):
@@ -103,8 +102,9 @@ class NewwinCommand(sublime_plugin.WindowCommand):
 		
 		self.window.new_file()
 		viewv = self.window.active_view()
-		viewv.run_command('testexec', { "lines" : buffa })
-		viewv.set_syntax_file('Packages/VeeamLogViewer/veeam-logs.tmLanguage')
+		viewv.run_command('textexec', { "lines" : buffa })
+		viewv.assign_syntax(lang_file)
+		#viewv.set_syntax_file(lang_file)
 
 class PutnewwinCommand(sublime_plugin.WindowCommand):
 	def run(self):
@@ -129,5 +129,5 @@ class PutnewwinCommand(sublime_plugin.WindowCommand):
 			if '\n' not in lines[l]:
 				lines[l] += '\n'
 
-		viewv.run_command('testexec', { "lines" : lines })
-		viewv.set_syntax_file('Packages/VeeamLogViewer/veeam-logs.tmLanguage')
+		viewv.run_command('textexec', { "lines" : lines })
+		viewv.assign_syntax(lang_file)
