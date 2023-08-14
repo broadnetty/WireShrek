@@ -3,7 +3,6 @@ import datetime
 from time import mktime
 
 
-
 class LogLine:
 
     def __init__(self, textline):
@@ -111,7 +110,7 @@ class LogImporter:
             try:
                 fd = open(path, 'r')
             except:
-                print "Log file error!"
+                print("Log file error!")
 
             loglines = []
 
