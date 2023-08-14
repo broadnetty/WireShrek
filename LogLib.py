@@ -3,6 +3,7 @@ import datetime
 from time import mktime
 
 
+
 class LogLine:
 
     def __init__(self, textline):

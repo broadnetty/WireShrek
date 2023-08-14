@@ -1,9 +1,8 @@
 import sublime
 import sublime_plugin
 import sys
-#from LogLib import *
+from LogLib import *
 #Job.Backup_Job_For_restore.Backup.log Job.Veeam_Backup__SUK__-_Daily.Backup.log
-
 
 lang_file = 'WireShrek.tmLanguage'
 
@@ -47,7 +46,8 @@ class JobstatsCommand(sublime_plugin.WindowCommand):
 
 		for job in [(job) for job in LogImporter.openfile(str(envs['file_path'] + '\\' + envs['file_name']))]:
 		    #if i < job.entry[1] and i > job.entry[0]:
-		    buffa += str(job.getstat()) + '\n\n'
+		    #buffa += str(job.getstat()) + '\n\n'
+		    buffa = ["line1", "line2", "line3"]
 
 		
 		self.window.new_file()
