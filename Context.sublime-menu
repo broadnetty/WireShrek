@@ -14,6 +14,11 @@
                 "caption" : "Put to Tab",
                 "command": "putnewwin" 
                 },
+                {
+                "id" : "Jobstat",
+                "caption" : "Show log stat",
+                "command": "jobstat" 
+                },
                 
             ]
     }
