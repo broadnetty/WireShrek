@@ -12,6 +12,15 @@ This baby should be carried manually to your machine and installed. Later I will
 Thanks for understanding!
 
 Installation:
+
+Via Sublime repository:
+1. **Open Sublime Text - Prefences - Package Conrtol.**
+2. Choose **Add a repository** and input main or test repository link at the botom of the window:
+3. Press enter to save and go to the Package Conrtol again.
+4. Choose **Install package** and start typing WireShrek to see the option. It will only appear if the package is not installed.
+If you have an older version of the package, you may **Remove Package** and **Install Package** after that.
+
+Manual (Old way):
 1. Download the Project as Zip file to your system (This page -> Top Right -> Clone or Download -> Download ZIP)
 2. Open Sublime and if you did not install any plugin before then go to Tools -> Install package control
 3. In the Sublime window, when the other desirable packages are installed, pls go to the:
