@@ -1,5 +1,5 @@
 # [PackageDev] target_format: plist, ext: tmLanguage
-name: Veeam B&R Logs
+name: Wireshrek
 scopeName: source.log
 fileTypes: [log]
 uuid: d09bae69-0591-4a8d-89ae-0962c77d82b4
