@@ -3,6 +3,10 @@ import datetime
 from time import mktime
 
 
+class LineAws:
+    def __init__(self, textline):
+        pass
+
 class LogLine:
 
     def __init__(self, textline):
@@ -62,10 +66,10 @@ class Log:
         return
 
     def getstat(self):
-        return 'Job name: \t\t' + str(self.findphrase('Job Name:')[0].findinpar('[]')[0]) \
+        return 'Job name: \t\t' + str(self.findphrase('successfully. Name:')[0].findinpar('[]')[0]) \
          + '\nStart time: \t' + str(self.findphrase('Process start time:')[0].findinpar('[]')[0]) \
          + '\nEnd time: \t\t' + str(datetime.datetime.fromtimestamp(self.Lines[-1].timecode).strftime('%d/%m/%Y %H:%M:%S')) \
-         + '\nResult stat: \t' + str(self.findphrases(['Job session', 'has been completed'], self.Lines)[0].findinpar('\'\'')[1]) \
+         #+ '\nResult stat: \t' + str(self.findphrases(['Backup policy', 'has been stopped'], self.Lines)[0].findinpar('\'\'')[1]) \
          + '\nLoaded lines: \t' + str(len(self.Lines))
 
     def parse_lines(self, lines):
